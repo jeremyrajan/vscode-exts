@@ -1,0 +1,36 @@
+{
+  "name": "webcomponent-generator",
+  "displayName": "webcomponent-generator",
+  "description": "Webcomponent generator",
+  "version": "0.0.1",
+  "publisher": "jeremyrajan",
+  "engines": {
+      "vscode": "^1.5.0"
+  },
+  "categories": [
+      "Other"
+  ],
+  "activationEvents": [
+      "onCommand:extension.createComponent"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+      "commands": [{
+          "command": "extension.createComponent",
+          "title": "Web Component"
+      }]
+  },
+  "scripts": {
+      "vscode:prepublish": "tsc -p ./",
+      "compile": "tsc -watch -p ./",
+      "postinstall": "node ./node_modules/vscode/bin/install",
+      "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+      "typescript": "^2.0.3",
+      "vscode": "^1.0.0",
+      "mocha": "^2.3.3",
+      "@types/node": "^6.0.40",
+      "@types/mocha": "^2.2.32"
+  }
+}
