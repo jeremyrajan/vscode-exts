@@ -17,7 +17,7 @@
   "contributes": {
       "commands": [{
           "command": "extension.createComponent",
-          "title": "Web Component"
+          "title": "Create Webcomponent"
       }]
   },
   "scripts": {

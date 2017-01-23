@@ -45,11 +45,22 @@ export function activate(context: vscode.ExtensionContext) {
       // The code you place here will be executed every time your command is executed
 
       const editor = vscode.window.activeTextEditor;
+      const fileName = editor.document.fileName;
+      let componentName = 'my-component';
       if (!editor) {
           return; // No open text editor
       }
 
-      const componentName = editor.document.fileName.split(path.sep).pop().split('.')[0];
+      if (fileName && !fileName.includes('Untitled')) {
+        // if we have a file name then take that.
+        componentName = fileName.split(path.sep).pop().split('.')[0];
+      }
+
+      // its a standard to have - in name. Hence check that.
+      if (!componentName || !componentName.includes('-')) {
+        // Display a message box to the user saying component name cant be empty or without -
+        vscode.window.showInformationMessage(`Cant Create: ${componentName}. Component name invalid.`);
+      }
 
       // create the snippet and do the deed.
       const template = createSnippet(componentName);
@@ -62,7 +73,6 @@ export function activate(context: vscode.ExtensionContext) {
           editBuilder.insert(editor.selection.start, template);
           });
       });
-
 
       // Display a message box to the user
       vscode.window.showInformationMessage(`Webcomponent created: ${componentName}`);
