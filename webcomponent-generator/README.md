@@ -1,7 +1,8 @@
 # webcomponent-generator
 
-This extension creates an webcomponet for you and inserts it into your current window. The name is derived from the filename you are
-working on.
+This extension creates an webcomponet for you and inserts it into your current window. The name is derived from the filename you are working on.
+
+Marketplace Link: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webcomponent-generator
 
 ## Install
 
