@@ -5,4 +5,7 @@ working on.
 
 ## Usage
 
-Open the command window and look for `Create Webcomponent` :).
+Open the command window and look for:
+
+* `Create Webcomponent ES5` (which will create v0 spec using registerElement)
+* `Create Wecomponent ES6` (which will create v1 spec using customElements)
