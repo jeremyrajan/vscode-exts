@@ -1,9 +1,18 @@
 {
   "name": "webcomponent-generator",
   "displayName": "Webcomponent generator",
-  "description": "Webcomponent generator",
+  "description": "Webcomponent generator as per v0 and v1 spec.",
+  "icon": "images/icon.png",
   "version": "1.0.0",
   "publisher": "jeremyrajan",
+  "bugs": {
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator/issues"
+  },
+  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator"
+  },
   "engines": {
       "vscode": "^1.5.0"
   },
