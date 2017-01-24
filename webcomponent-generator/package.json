@@ -2,7 +2,7 @@
   "name": "webcomponent-generator",
   "displayName": "webcomponent-generator",
   "description": "Webcomponent generator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "jeremyrajan",
   "engines": {
       "vscode": "^1.5.0"
@@ -11,13 +11,18 @@
       "Other"
   ],
   "activationEvents": [
-      "onCommand:extension.createComponent"
+      "onCommand:extension.createComponentV0",
+      "onCommand:extension.createComponentV1"
   ],
   "main": "./out/src/extension",
   "contributes": {
       "commands": [{
-          "command": "extension.createComponent",
-          "title": "Create Webcomponent"
+          "command": "extension.createComponentV0",
+          "title": "Create Webcomponent ES5"
+      },
+      {
+          "command": "extension.createComponentV1",
+          "title": "Create Webcomponent ES6"
       }]
   },
   "scripts": {

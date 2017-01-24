@@ -4,7 +4,13 @@
 import * as vscode from 'vscode';
 const path = require('path');
 
-const createSnippet = (componentName) => {
+/**
+ * There are 2 versions/specs available for defining custom elements (without polyfilling).
+ * Using the registerElement which is v0 and using class method in v1.
+ * Support: http://caniuse.com/#search=custom
+ */
+
+const createSnippetV0 = (componentName) => {
 return `// <${componentName}></${componentName}>
 
 var componentProto = Object.create(HTMLElement.prototype);
@@ -29,56 +35,73 @@ componentProto.attributeChangedCallback = function(name, oldVal, newVal) {
 componentProto.doSomething = function() { ... };
 
 document.registerElement('${componentName}', {prototype: componentProto});`;
+};
+
+const createSnippetV1 = (componentName) => {
+  const className = componentName.split('-').map(f => f.charAt(0).toUpperCase() + f.slice(1)).join('');
+return `// <${componentName}></${componentName}>
+class ${className} extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+    ...
+  }
+  connectedCallback() {
+    ...
+  }
+  disconnectedCallback() {
+    ...
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    ...
+  }
 }
+
+window.customElements.define('${componentName}', ${className});`;
+};
+
+
+const createComponent = (vscode, v0 = true) => {
+  // The code you place here will be executed every time your command is executed
+  const editor = vscode.window.activeTextEditor;
+  const fileName = editor.document.fileName;
+  let componentName = 'my-component';
+  if (!editor) {
+      return; // No open text editor
+  }
+
+  if (fileName && !fileName.includes('Untitled')) {
+    // if we have a file name then take that.
+    componentName = fileName.split(path.sep).pop().split('.')[0];
+  }
+
+  // its a standard to have - in name. Hence check that.
+  if (!componentName || !componentName.includes('-')) {
+    // Display a message box to the user saying component name cant be empty or without -
+    vscode.window.showInformationMessage(`Cant Create: ${componentName}. Component name invalid.`);
+  }
+
+  // create the snippet and do the deed. (change according to type defined.)
+  const template = v0 ? createSnippetV0(componentName) : createSnippetV1(componentName);
+
+  const editorEdit = vscode.window.activeTextEditor;
+  editorEdit.edit((editBuilder) => {
+      editBuilder.delete(editor.selection);
+  }).then(() => {
+      editorEdit.edit(function (editBuilder) {
+      editBuilder.insert(editor.selection.start, template);
+      });
+  });
+
+  // Display a message box to the user
+  vscode.window.showInformationMessage(`Webcomponent created: ${componentName}`);
+};
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  // Use the console to output diagnostic information (console.log) and errors (console.error)
-  // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "webcomponent-generator" is now active!');
-
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with  registerCommand
-  // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand('extension.createComponent', () => {
-      // The code you place here will be executed every time your command is executed
-
-      const editor = vscode.window.activeTextEditor;
-      const fileName = editor.document.fileName;
-      let componentName = 'my-component';
-      if (!editor) {
-          return; // No open text editor
-      }
-
-      if (fileName && !fileName.includes('Untitled')) {
-        // if we have a file name then take that.
-        componentName = fileName.split(path.sep).pop().split('.')[0];
-      }
-
-      // its a standard to have - in name. Hence check that.
-      if (!componentName || !componentName.includes('-')) {
-        // Display a message box to the user saying component name cant be empty or without -
-        vscode.window.showInformationMessage(`Cant Create: ${componentName}. Component name invalid.`);
-      }
-
-      // create the snippet and do the deed.
-      const template = createSnippet(componentName);
-
-      const editorEdit = vscode.window.activeTextEditor;
-      editorEdit.edit((editBuilder) => {
-          editBuilder.delete(editor.selection);
-      }).then(() => {
-          editorEdit.edit(function (editBuilder) {
-          editBuilder.insert(editor.selection.start, template);
-          });
-      });
-
-      // Display a message box to the user
-      vscode.window.showInformationMessage(`Webcomponent created: ${componentName}`);
-  });
-
-  context.subscriptions.push(disposable);
+  const createComponentV0 = vscode.commands.registerCommand('extension.createComponentV0', () => createComponent(vscode));
+  const createComponentV1 = vscode.commands.registerCommand('extension.createComponentV1', () => createComponent(vscode, false));
+  context.subscriptions.push(createComponentV0, createComponentV1);
 }
 
 // this method is called when your extension is deactivated
