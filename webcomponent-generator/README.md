@@ -1,4 +1,4 @@
-# webcomponent-generator README
+# webcomponent-generator
 
 This extension creates an webcomponet for you and inserts it into your current window. The name is derived from the filename you are
 working on.
