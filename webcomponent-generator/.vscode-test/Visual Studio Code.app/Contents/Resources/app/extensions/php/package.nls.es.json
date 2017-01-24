@@ -1,0 +1,6 @@
+{
+	"configuration.validate.enable": "Indica si la validación de PHP está habilitada o no.",
+	"configuration.validate.executablePath": "Señala al ejecutable PHP.",
+	"configuration.validate.run": "Indica si linter se ejecuta al guardar o al escribir.",
+	"configuration.title": "PHP"
+}

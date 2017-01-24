@@ -1,0 +1,27 @@
+{
+	"name": "coffeescript",
+	"version": "0.1.0",
+	"publisher": "vscode",
+	"engines": { "vscode": "*" },
+	"scripts": {
+		"update-grammar": "node ../../build/npm/update-grammar.js textmate/coffee-script.tmbundle Syntaxes/CoffeeScript.tmLanguage ./syntaxes/coffeescript.json"
+	},
+	"contributes": {
+		"languages": [{
+			"id": "coffeescript",
+			"extensions": [ ".coffee", ".cson" ],
+			"aliases": [ "CoffeeScript", "coffeescript", "coffee" ],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "coffeescript",
+			"scopeName": "source.coffee",
+			"path": "./syntaxes/coffeescript.json"
+		}],
+		"breakpoints": [
+			{
+				"language": "coffeescript"
+			}
+		]
+	}
+}

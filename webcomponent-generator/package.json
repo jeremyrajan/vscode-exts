@@ -1,6 +1,6 @@
 {
   "name": "webcomponent-generator",
-  "displayName": "webcomponent-generator",
+  "displayName": "Webcomponent generator",
   "description": "Webcomponent generator",
   "version": "1.0.0",
   "publisher": "jeremyrajan",
@@ -8,7 +8,7 @@
       "vscode": "^1.5.0"
   },
   "categories": [
-      "Other"
+      "Languages", "Snippets", "Other"
   ],
   "activationEvents": [
       "onCommand:extension.createComponentV0",
