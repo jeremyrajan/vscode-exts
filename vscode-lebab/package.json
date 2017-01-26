@@ -1,0 +1,39 @@
+{
+  "name": "vscode-lebab",
+  "displayName": "Lebab",
+  "description": "Convert es5 to es6/7 syntax",
+  "version": "0.0.1",
+  "publisher": "jeremyrajan",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.lebab"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.lebab",
+        "title": "ES5 to ES6"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32",
+    "lebab": "^2.7.1"
+  }
+}
