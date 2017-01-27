@@ -1,14 +1,25 @@
 {
   "name": "vscode-lebab",
-  "displayName": "Lebab",
+  "displayName": "ES5 to ES6",
   "description": "Convert es5 to es6/7 syntax",
-  "version": "0.0.1",
+  "icon": "images/es6.png",
+  "version": "1.0.0",
   "publisher": "jeremyrajan",
+  "bugs": {
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab/issues"
+  },
+  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab"
+  },
   "engines": {
     "vscode": "^1.5.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Linters",
+    "Languages"
   ],
   "activationEvents": [
     "onCommand:extension.lebab"
