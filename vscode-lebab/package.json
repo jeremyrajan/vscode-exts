@@ -3,7 +3,7 @@
   "displayName": "ES5 to ES6",
   "description": "Convert es5 to es6/7 syntax",
   "icon": "images/es6.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jeremyrajan",
   "bugs": {
     "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab/issues"
