@@ -20,7 +20,7 @@ This will create a temp file (untitled) in the same directory, which can be save
 
 ![image](https://cloud.githubusercontent.com/assets/2890683/22382931/c070438a-e4ed-11e6-98b3-20f5806a71b9.png)
 
-* If you there are any warnings, it will shown in problems panel.
+* If there are any warnings, it will be shown in problems panel.
 
 ![image](https://cloud.githubusercontent.com/assets/2890683/22382946/c8a2d950-e4ed-11e6-820f-26d6aded20ee.png)
 
