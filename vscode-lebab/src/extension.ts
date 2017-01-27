@@ -3,6 +3,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import {transform} from 'lebab';
+import {parse} from 'esprima';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -16,6 +17,12 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     const textCode = editor.document.getText();
+    // check for errors in JS code and if yes, then show the error.
+    try {
+      parse(textCode)
+    } catch(err) {
+      return vscode.window.showErrorMessage(`ERROR: ${err.description} at ${err.lineNumber}`);
+    }
     // transforms: https://github.com/lebab/lebab#safe-transforms
     const {code, warnings} = transform(textCode, ['arrow', 'let', 'for-of', 'for-each', 'arg-rest', 'arg-spread', 'obj-method', 'obj-shorthand', 'no-strict', 'exponent', 'template']);
 
@@ -37,11 +44,17 @@ export function activate(context: vscode.ExtensionContext) {
         });
       })
     }, (error: any) => {
+      // if we errors, log it. No need to show.
       console.error(error);
     });
 
     if (warnings.length > 0) {
-      vscode.window.showErrorMessage('Errors', warnings);
+      const es6Conversion = vscode.window.createOutputChannel('es6');
+      es6Conversion.show();
+      let result = 'Warnings: \n';
+      result += '---------------------------------------\n'
+      result += warnings.map(w => `* ${w.msg} at line ${w.line}`).join('\n');
+      es6Conversion.append(result);
     }
   });
 
