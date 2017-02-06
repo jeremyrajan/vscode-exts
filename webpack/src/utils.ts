@@ -2,7 +2,6 @@ const fs = require('fs-extra');
 const path = require('path');
 import {format} from 'prettier';
 import {workspace} from 'vscode';
-import {exec} from 'shelljs';
 const rootPath = workspace.rootPath;
 const packageFile = path.join(rootPath, 'package.json');
 
