@@ -7,7 +7,7 @@ Marketplace Link: https://marketplace.visualstudio.com/search?term=publisher%3A%
 * [Webcomponent Generator][3] ![](http://vsmarketplacebadge.apphb.com/installs/jeremyrajan.webcomponent-generator.svg)
 * [Webpack Config Generator][4] ![](http://vsmarketplacebadge.apphb.com/installs/jeremyrajan.webpack.svg)
 
-[1]: https://github.com/jeremyrajan/vscode-exts/tree/master/react-component
-[2]: https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab
-[3]: https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator
-[4]: https://github.com/jeremyrajan/vscode-exts/tree/master/webpack
+[1]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.react-component
+[2]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.vscode-lebab
+[3]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webcomponent-generator
+[4]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webpack
