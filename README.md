@@ -1,7 +1,5 @@
 # Visual Studio Code Extensions
 
-Marketplace Link: https://marketplace.visualstudio.com/search?term=publisher%3A%22Jeremy%20Rajan%22&target=VSCode&sortBy=Relevance
-
 * [React Component][1] ![react-component](http://vsmarketplacebadge.apphb.com/installs/jeremyrajan.react-component.svg)
 * [Lebab ES5-ES6][2] ![](http://vsmarketplacebadge.apphb.com/installs/jeremyrajan.vscode-lebab.svg)
 * [Webcomponent Generator][3] ![](http://vsmarketplacebadge.apphb.com/installs/jeremyrajan.webcomponent-generator.svg)
