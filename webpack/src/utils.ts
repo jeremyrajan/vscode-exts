@@ -1,23 +1,26 @@
 const fs = require('fs-extra');
 const path = require('path');
-import {format} from 'prettier';
+import {js_beautify} from 'js-prettify';
 import {workspace} from 'vscode';
 const rootPath = workspace.rootPath;
 const packageFile = path.join(rootPath, 'package.json');
 
 const prettyConfig = {
-  // Fit code within this line limit
-  printWidth: 80,
-  // Number of spaces it should use per tab
-  tabWidth: 2,
-  // If true, will use single instead of double quotes
-  singleQuote: true,
-  // Controls the printing of trailing commas wherever possible
-  trailingComma: false,
-  // Controls the printing of spaces inside array and objects
-  bracketSpacing: true,
-  // Which parser to use. Valid options are 'flow' and 'babylon'
-  parser: 'babylon'
+  indent_size: 2,
+  indent_char: " ",
+  indent_level: 0,
+  indent_with_tabs: false,
+  preserve_newlines: false,
+  max_preserve_newlines: 10,
+  jslint_happy: false,
+  brace_style: "collapse",
+  keep_array_indentation: false,
+  keep_function_indentation: false,
+  space_before_conditional: true,
+  break_chained_methods: false,
+  eval_code: false,
+  unescape_strings: false,
+  wrap_line_length: 0
 };
 
 export function checkExists (path) {
@@ -25,7 +28,11 @@ export function checkExists (path) {
 }
 
 export function formatCode (content, config = prettyConfig) {
-  return format(content, prettyConfig);
+  try {
+    return js_beautify(content, prettyConfig);
+  } catch (error) {
+    return console.log(error); // lets stop it here :(
+  }
 }
 
 export function copyFile (src, dest) {
@@ -71,7 +78,6 @@ export function getWebpackConfig () {
   }
   return `
     const path = require('path');
-
     module.exports = {
       entry: './${appPath}/index.js',
       output: {
@@ -84,7 +90,7 @@ export function getWebpackConfig () {
             test: /\.jsx?$/,
             include: [
               path.resolve(__dirname, 'app')
-            ]
+            ],
             exclude: [
               path.resolve(__dirname, 'node_modules'),
               path.resolve(__dirname, 'bower_components')
@@ -117,9 +123,9 @@ export function updateDevDependencies () {
     "webpack": "^2.2.1"
   };
 
-  const newPackageFile = Object.assign({}, require(packageFile), {
+  const newPackageInfo = Object.assign({}, require(packageFile), {
     devDependencies: devDependencies
   });
 
-  return createFile(packageFile, newPackageFile, true);
+  return newPackageInfo;
 }

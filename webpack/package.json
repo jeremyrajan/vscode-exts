@@ -2,7 +2,7 @@
   "name": "webpack",
   "displayName": "webpack",
   "description": "Create Webpack Config with ES6 transpiling using babel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "publisher": "jeremyrajan",
   "icon": "images/webpack.png",
   "bugs": {
@@ -49,6 +49,6 @@
   },
   "dependencies": {
     "fs-extra": "^2.0.0",
-    "prettier": "^0.16.0"
+    "js-prettify": "^1.4.0"
   }
 }

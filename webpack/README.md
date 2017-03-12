@@ -17,3 +17,9 @@ By default, `app` and `dist` folder is used, if it can't find the folders.
 
 ![image](https://cloud.githubusercontent.com/assets/2890683/22660177/8e7d1eb2-ecc6-11e6-846c-aeea22d4a32e.png)
 
+## Development
+
+1. Clone the repo and open the individual ext folder in VSCODE.
+2. Run `npm i`
+3. Start debugging via VSCODE debug.
+
