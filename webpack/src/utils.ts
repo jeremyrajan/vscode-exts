@@ -74,26 +74,32 @@ export function getWebpackConfig () {
 
     module.exports = {
       entry: './${appPath}/index.js',
-      devtool: 'source-map',
-      resolve: {
-        extensions: ['', '.js', '.jsx']
-      },
       output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '${bundlePath}')
       },
       module: {
-        loaders: [
+        rules: [
           {
-            test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: 'babel', // 'babel-loader' is also a valid name to reference
+            test: /\.jsx?$/,
+            include: [
+              path.resolve(__dirname, 'app')
+            ]
+            exclude: [
+              path.resolve(__dirname, 'node_modules'),
+              path.resolve(__dirname, 'bower_components')
+            ],
+            loader: 'babel-loader',
             query: {
               presets: ['es2015']
             }
           }
         ]
-      }
+      },
+      resolve: {
+        extensions: ['.json', '.js', '.jsx', '.css']
+      },
+      devtool: 'source-map'
     };
   `;
 }
