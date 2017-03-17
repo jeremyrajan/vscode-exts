@@ -108,7 +108,7 @@ export function getWebpackConfig () {
       },
       devtool: 'source-map',
       devServer: {
-        publicPath: path.join(__dirname, '${bundlePath}/')
+        publicPath: path.join('/${bundlePath}/')
       }
     };
   `;
