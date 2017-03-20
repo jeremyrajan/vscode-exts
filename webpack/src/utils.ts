@@ -78,8 +78,9 @@ export function getWebpackConfig () {
   }
   return `
     const path = require('path');
+    
     module.exports = {
-      entry: './${appPath}/index.js',
+      entry: path.join(__dirname, '${appPath}', 'index'),
       output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '${bundlePath}')
@@ -89,7 +90,7 @@ export function getWebpackConfig () {
           {
             test: /\.jsx?$/,
             include: [
-              path.resolve(__dirname, 'app')
+              path.resolve(__dirname, '${appPath}')
             ],
             exclude: [
               path.resolve(__dirname, 'node_modules'),
@@ -105,7 +106,10 @@ export function getWebpackConfig () {
       resolve: {
         extensions: ['.json', '.js', '.jsx', '.css']
       },
-      devtool: 'source-map'
+      devtool: 'source-map',
+      devServer: {
+        publicPath: path.join('/${bundlePath}/')
+      }
     };
   `;
 }
