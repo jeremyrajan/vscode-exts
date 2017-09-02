@@ -3,7 +3,7 @@
   "displayName": "Webcomponent generator",
   "description": "Webcomponent generator as per v0 and v1 spec.",
   "icon": "images/icon.png",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "jeremyrajan",
   "bugs": {
     "url": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator/issues"
