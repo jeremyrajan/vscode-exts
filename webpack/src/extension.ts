@@ -3,7 +3,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 const path = require('path');
-import { getWebpackConfig, createFile, formatCode, checkExists } from './utils';
+import { getWebpackConfig, createFile, formatCode, checkExists, updateDevDependencies } from './utils';
 
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "webpack" is now active!');
@@ -19,8 +19,9 @@ export function activate(context: vscode.ExtensionContext) {
     if (checkExists(webPackPath)) {
       return vscode.window.showInformationMessage('Webpack config already exists.');
     }
-    const webPackConfig = formatCode(getWebpackConfig());
-    if (createFile(webPackPath, webPackConfig)) {
+    const webPackConfig = formatCode(getWebpackConfig()); // get the webpack config
+    const isDevDepsUpdated = updateDevDependencies(); // update dev deps
+    if (createFile(webPackPath, webPackConfig) && isDevDepsUpdated) { // if written and updated
       return vscode.window.showInformationMessage('Webpack config created and dependencies update. Please run npm install');
     }
     return vscode.window.showErrorMessage('Something went wrong, please try again.');

@@ -72,10 +72,6 @@ export function getBundlePath () {
 export function getWebpackConfig () {
   const appPath = getAppPath();
   const bundlePath = getBundlePath();
-  // update devDeps before we update webpack.
-  if (!updateDevDependencies()) {
-    return;
-  }
   return `
     const path = require('path');
     
@@ -131,5 +127,11 @@ export function updateDevDependencies () {
     devDependencies: devDependencies
   });
 
-  return newPackageInfo;
+  // write JSON to package.
+  try {
+    fs.writeJsonSync(packageFile, newPackageInfo);
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
