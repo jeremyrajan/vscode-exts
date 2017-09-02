@@ -6,12 +6,12 @@
   "version": "1.0.1",
   "publisher": "jeremyrajan",
   "bugs": {
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator/issues"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator/issues"
   },
-  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator",
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webcomponent-generator"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator"
   },
   "engines": {
       "vscode": "^1.5.0"
