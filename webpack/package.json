@@ -6,12 +6,12 @@
   "publisher": "jeremyrajan",
   "icon": "images/webpack.png",
   "bugs": {
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/issues"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/issues"
   },
-  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/masterwebpack",
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/webpack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webpack"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/webpack"
   },
   "engines": {
     "vscode": "^1.5.0"
