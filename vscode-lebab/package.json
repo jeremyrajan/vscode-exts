@@ -3,15 +3,15 @@
   "displayName": "ES5 to ES6",
   "description": "Convert es5 to es6/7 syntax",
   "icon": "images/es6.png",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "jeremyrajan",
   "bugs": {
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab/issues"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/vscode-lebab/issues"
   },
-  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab",
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/vscode-lebab",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/vscode-lebab"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/vscode-lebab"
   },
   "engines": {
     "vscode": "^1.5.0"

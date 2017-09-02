@@ -3,15 +3,15 @@
   "displayName": "React Component",
   "description": "Create react component using ES6",
   "icon": "images/react.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jeremyrajan",
   "bugs": {
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/react-component/issues"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/react-component/issues"
   },
-  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/react-component",
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/react-component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/react-component"
+    "url": "https://github.com/remicass/vscode-exts/tree/master/react-component"
   },
   "engines": {
     "vscode": "^1.5.0"
