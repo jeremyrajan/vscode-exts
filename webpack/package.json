@@ -2,7 +2,7 @@
   "name": "webpack",
   "displayName": "webpack",
   "description": "Create Webpack Config with ES6 transpiling using babel",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "publisher": "jeremyrajan",
   "icon": "images/webpack.png",
   "bugs": {
