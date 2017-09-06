@@ -3,7 +3,7 @@
 
 # BrowerSync VSCODE
 
-Starts a browserSync server with watch mode at `:3000` by default. The UI for browsersync is available at `:3001`.
+Starts a browserSync Static server with watch mode at `:3000` by default. The UI for browsersync is available at `:3001`.
 
 * Right click on the folder from your VSCODE explorer menu. And click on `BrowerSync Start`.
 
