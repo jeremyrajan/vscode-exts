@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 import * as browsersync from 'browser-sync';
 import { openUrl } from './utils';
 
-let browserSyncServer, statusBarItem;
+let browserSyncServer: browsersync.BrowserSyncInstance, statusBarItem: vscode.StatusBarItem;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -26,6 +26,15 @@ export function activate(context: vscode.ExtensionContext) {
       return vscode.window.showErrorMessage('Unable to find the directory to serve. Exiting');
     }
 
+    // if we already have a server active. Close that first.
+    if (browserSyncServer) {
+      vscode.window.showWarningMessage(`Shutting down the existing server at localhost:3000`);
+      browserSyncServer.exit();
+      browserSyncServer = null;
+      statusBarItem.dispose();
+      statusBarItem = null;
+    }
+
     browserSyncServer = browsersync.create();
     browserSyncServer.init({
       serveStatic: [folderPath],
@@ -43,6 +52,7 @@ export function activate(context: vscode.ExtensionContext) {
       statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
       statusBarItem.command = 'extension.openInBrowser';
       statusBarItem.text = `$(link-external) ${details.url}`;
+      statusBarItem.color = '#1B98EE';
       statusBarItem.show();
     });
   });
@@ -69,5 +79,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 // this method is called when your extension is deactivated
 export function deactivate() {
+  if (browserSyncServer) {
+    browserSyncServer.exit();
+  }
+
+  if (statusBarItem) {
+    statusBarItem.dispose();
+  }
   browserSyncServer = statusBarItem = null;
 }
