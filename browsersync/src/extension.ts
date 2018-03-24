@@ -26,6 +26,11 @@ export function activate(context: vscode.ExtensionContext) {
       return vscode.window.showErrorMessage('Unable to find the directory to serve. Exiting');
     }
 
+    if (m.path.includes('/') && process.platform === 'win32') {
+      console.log('BrowserSync (WIN): Replace paths');
+      m.path = m.path.replace('/', '')
+    }
+
     // if we already have a server active. Close that first.
     if (browserSyncServer) {
       vscode.window.showWarningMessage(`Shutting down the existing server at localhost:3000`);
@@ -35,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
       statusBarItem = null;
     }
 
+    const configuration = vscode.workspace.getConfiguration('browsersync');
     browserSyncServer = browsersync.create();
     browserSyncServer.init({
       serveStatic: [folderPath],
@@ -48,7 +54,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     browserSyncServer.emitter.on('service:running', (details) => {
       vscode.window.showInformationMessage(`BrowserSync [with reload] running at ${details.url}`);
-      openUrl(details.url);
+      if (configuration.get('openBrowser')) {
+        openUrl(details.url);
+      }
       statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
       statusBarItem.command = 'extension.openInBrowser';
       statusBarItem.text = `$(link-external) ${details.url}`;

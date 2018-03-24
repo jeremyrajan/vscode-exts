@@ -2,7 +2,7 @@
   "name": "browsersync",
   "displayName": "browsersync",
   "description": "Starts a browsersync server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "jeremyrajan",
   "icon": "images/browsersync.png",
   "galleryBanner": {
@@ -22,13 +22,25 @@
     "vscode": "^1.5.0"
   },
   "categories": [
-    "Debuggers", "Extension Packs", "Other"
+    "Debuggers",
+    "Extension Packs",
+    "Other"
   ],
   "activationEvents": [
     "onCommand:extension.startServer"
   ],
   "main": "./out/src/extension",
   "contributes": {
+    "configuration": {
+      "title": "Browsersync configuration",
+      "properties": {
+        "browsersync.openBrowser": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to open browser on restart or not."
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.startServer",
