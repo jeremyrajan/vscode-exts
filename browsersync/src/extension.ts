@@ -21,14 +21,14 @@ export function activate(context: vscode.ExtensionContext) {
   let startServer = vscode.commands.registerCommand('extension.startServer', (m) => {
     // The code you place here will be executed every time your command is executed
     // Display a message box to the user
-    const folderPath = m.path;
-    if (!m.path) {
+    let folderPath = m.path;
+    if (!folderPath) {
       return vscode.window.showErrorMessage('Unable to find the directory to serve. Exiting');
     }
 
-    if (m.path.includes('/') && process.platform === 'win32') {
+    if (process.platform === 'win32') {
       console.log('BrowserSync (WIN): Replace paths');
-      m.path = m.path.replace('/', '')
+      folderPath = m.fsPath;
     }
 
     // if we already have a server active. Close that first.
