@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
-import {js_beautify} from 'js-prettify';
-import {workspace} from 'vscode';
+import { js_beautify } from 'js-prettify';
+import { workspace } from 'vscode';
 const rootPath = workspace.rootPath;
 const packageFile = path.join(rootPath, 'package.json');
 
@@ -23,11 +23,11 @@ const prettyConfig = {
   wrap_line_length: 0
 };
 
-export function checkExists (path) {
+export function checkExists(path) {
   return fs.existsSync(path);
 }
 
-export function formatCode (content, config = prettyConfig) {
+export function formatCode(content, config = prettyConfig) {
   try {
     return js_beautify(content, prettyConfig);
   } catch (error) {
@@ -35,7 +35,7 @@ export function formatCode (content, config = prettyConfig) {
   }
 }
 
-export function copyFile (src, dest) {
+export function copyFile(src, dest) {
   try {
     fs.copySync(path.resolve(src), dest);
     return true;
@@ -44,7 +44,7 @@ export function copyFile (src, dest) {
   }
 }
 
-export function createFile (filePath, content, __JSON__ = false) {
+export function createFile(filePath, content, __JSON__ = false) {
   try {
     if (__JSON__) {
       fs.outputJSONSync(filePath, content);
@@ -57,19 +57,19 @@ export function createFile (filePath, content, __JSON__ = false) {
   }
 }
 
-export function getAppPath () {
+export function getAppPath() {
   const appPaths = ['app', 'src'];
   const appPath = appPaths.find(f => checkExists(path.join(rootPath, f)));
   return appPath || 'app';
 }
 
-export function getBundlePath () {
+export function getBundlePath() {
   const bundlePaths = ['dist', 'out', 'bundle'];
   const bundlePath = bundlePaths.find(f => checkExists(path.join(rootPath, f)));
   return bundlePath || 'dist';
 }
 
-export function getWebpackConfig () {
+export function getWebpackConfig() {
   const appPath = getAppPath();
   const bundlePath = getBundlePath();
   return `
@@ -110,7 +110,7 @@ export function getWebpackConfig () {
   `;
 }
 
-export function updateDevDependencies () {
+export function updateDevDependencies() {
   // if we dont have a package file, then no need to update.
   if (!checkExists(packageFile)) {
     return;
@@ -118,9 +118,10 @@ export function updateDevDependencies () {
 
   const devDependencies = {
     "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.18.0",
-    "webpack": "^2.2.1"
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
   };
 
   const newPackageInfo = Object.assign({}, require(packageFile), {
