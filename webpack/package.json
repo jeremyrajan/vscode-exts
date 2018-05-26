@@ -2,7 +2,7 @@
   "name": "webpack",
   "displayName": "webpack",
   "description": "Create Webpack Config with ES6 transpiling using babel",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "publisher": "jeremyrajan",
   "icon": "images/webpack.png",
   "bugs": {
@@ -17,11 +17,7 @@
     "vscode": "^1.5.0"
   },
   "license": "MIT",
-  "categories": [
-    "Other",
-    "Snippets",
-    "Languages"
-  ],
+  "categories": ["Programming Languages"],
   "activationEvents": [
     "onCommand:extension.createConfig"
   ],

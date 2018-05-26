@@ -76,6 +76,7 @@ export function getWebpackConfig() {
     const path = require('path');
     
     module.exports = {
+      mode: 'development',
       entry: path.join(__dirname, '${appPath}', 'index'),
       output: {
         filename: 'bundle.js',
