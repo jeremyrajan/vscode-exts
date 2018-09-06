@@ -17,3 +17,5 @@
 [4]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webpack
 [5]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.browsersync
 
+<img src="https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.webpack&install=&badge" />
+
