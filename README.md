@@ -9,6 +9,8 @@
 )
 * [BrowserSync][5] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.browsersync&install=&badge)
 
+> Badges by [VS MarketPlace Stats](https://github.com/jeremyrajan/vs-marketplace-stats) :star:
+
 [1]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.react-component
 [2]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.vscode-lebab
 [3]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webcomponent-generator
