@@ -5,7 +5,7 @@
 )
 * [Webcomponent Generator][3] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webcomponent-generator&install
 )
-* [Webpack Config Generator][4] [![vscode.badge](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install)](https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webcomponent-generator)
+* [Webpack Config Generator][4] [![vscode.badge](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install)](https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webpack)
 
 * [BrowserSync][5] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.browsersync&install)
 
