@@ -1,13 +1,13 @@
 # Visual Studio Code Extensions
 
-* [React Component][1] ![react-component](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.react-component&install=&badge)
-* [Lebab ES5-ES6][2] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.vscode-lebab&install=&badge
+* [React Component][1] ![react-component](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.react-component&install)
+* [Lebab ES5-ES6][2] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.vscode-lebab&install
 )
-* [Webcomponent Generator][3] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.webcomponent-generator&install=&badge
+* [Webcomponent Generator][3] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webcomponent-generator&install
 )
-* [Webpack Config Generator][4] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.webpack&install=&badge
+* [Webpack Config Generator][4] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install
 )
-* [BrowserSync][5] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge?itemName=jeremyrajan.browsersync&install=&badge)
+* [BrowserSync][5] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.browsersync&install)
 
 > Badges by [VS MarketPlace Stats](https://github.com/jeremyrajan/vs-marketplace-stats) :star:
 
