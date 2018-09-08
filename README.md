@@ -7,6 +7,9 @@
 )
 * [Webpack Config Generator][4] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install
 )
+
+https://vsmarketplacebadge.apphb.com/installs/jeremyrajan.webpack.svg
+
 * [BrowserSync][5] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.browsersync&install)
 
 > Badges by [VS MarketPlace Stats](https://github.com/jeremyrajan/vs-marketplace-stats) :star:
