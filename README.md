@@ -8,6 +8,8 @@
 * [Webpack Config Generator][4] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install
 )
 
+[![vscode.badge](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install)](https://marketplace.visualstudio.com/items?itemName=jeremyrajan.webcomponent-generator)
+
 [![david.dm](https://david-dm.org/jeremyrajan/santari.svg)](https://david-dm.org/jeremyrajan/santari)
 
 
