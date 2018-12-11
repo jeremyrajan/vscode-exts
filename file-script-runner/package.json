@@ -1,0 +1,80 @@
+{
+  "name": "file-script-runner",
+  "displayName": "File Script runner",
+  "description": "Run shell script for a file",
+  "publisher": "jeremyrajan",
+  "version": "1.0.2",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "galleryBanner": {
+    "color": "#102633",
+    "theme": "dark"
+  },
+  "bugs": {
+    "url": "https://github.com/remicass/vscode-exts/tree/master/issues"
+  },
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/file-script-runner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remicass/vscode-exts/tree/master/file-script-runner"
+  },
+  "categories": [
+    "Other",
+    "Debuggers",
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onCommand:extension.run"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.run",
+        "title": "Run Script"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "File Script Runner",
+        "properties": {
+          "fileScriptRunner.script": {
+            "type": "string",
+            "default": "",
+            "description": "Default shell script to run (with args) for the file"
+          }
+        }
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "filesExplorerFocus",
+          "command": "extension.run",
+          "group": "9_cutcopypaste"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "extension.run"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.25",
+    "tslint": "^5.8.0",
+    "@types/node": "^8.10.25",
+    "@types/mocha": "^2.2.42"
+  }
+}

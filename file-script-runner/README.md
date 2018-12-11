@@ -1,0 +1,12 @@
+# file-script-runner
+
+## About
+Adds capability to run a global comman via built in terminal for a particular file. The usage is described below. Essentially, you can setup a global command using VSCODE settings page and yes you can use can include arguments (its a free text, so go crazy :smile: ). What it does is, prepending the command with the file name.
+
+## Usage
+Setup a global script to run for the file via prefrences panel. Look for `File Script Runner` in the settings and add in your command to be executed with the file.
+
+To activate,
+1. Right click on the editor tab and click `Run Script`.
+2. In the explorer view, right click on the file to access `Run Script`.
+
