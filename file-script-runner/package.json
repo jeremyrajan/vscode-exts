@@ -3,7 +3,7 @@
   "displayName": "File Script runner",
   "description": "Run shell script for a file",
   "publisher": "jeremyrajan",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.29.0"
@@ -41,9 +41,27 @@
         "title": "File Script Runner",
         "properties": {
           "fileScriptRunner.script": {
-            "type": "string",
-            "default": "",
-            "description": "Default shell script to run (with args) for the file"
+            "type": "array",
+            "description": "Default shell script to run (with args) for the file",
+            "items": {
+              "type": "object",
+              "title": "Script",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Script Name"
+                },
+                "script": {
+                  "type":"string",
+                  "description": "Shell script"
+                },
+                "default": {
+                  "type": "boolean",
+                  "description": "Is default?",
+                  "default": false
+                }
+              }
+            }
           }
         }
       }
