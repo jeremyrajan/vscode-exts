@@ -1,0 +1,47 @@
+{
+  "name": "webcomponent-generator",
+  "displayName": "Webcomponent generator",
+  "description": "Webcomponent generator as per v0 and v1 spec.",
+  "icon": "images/icon.png",
+  "version": "1.0.2",
+  "publisher": "jeremyrajan",
+  "bugs": {
+    "url": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator/issues"
+  },
+  "homepage": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remicass/vscode-exts/tree/master/webcomponent-generator"
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createComponentV0",
+    "onCommand:extension.createComponentV1"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createComponentV0",
+        "title": "Create Webcomponent ES5"
+      },
+      {
+        "command": "extension.createComponentV1",
+        "title": "Create Webcomponent ES6"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  }
+}

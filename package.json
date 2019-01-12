@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@types/browser-sync": "0.0.36",
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "lerna": "^3.10.5",
+    "mocha": "^2.3.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "browsersync": "file:extensions/browsersync",
+    "file-script-runner": "file:extensions/file-script-runner",
+    "react-component": "file:extensions/react-component",
+    "vscode-lebab": "file:extensions/vscode-lebab",
+    "webcomponent-generator": "file:extensions/webcomponent-generator",
+    "webpack": "file:extensions/webpack"
+  }
+}
