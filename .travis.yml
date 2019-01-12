@@ -3,7 +3,6 @@ node_js:
   - "11.1.0"
 
 before_install:
-  - npm install gulp -g
   - npm install santari -g
 
 script:
