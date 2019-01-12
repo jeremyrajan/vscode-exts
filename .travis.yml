@@ -3,7 +3,7 @@ node_js:
   - "11.1.0"
 
 install:
-  - npm ci
+  - lerna bootstrap
 
 before_install:
   - npm install lerna -g
