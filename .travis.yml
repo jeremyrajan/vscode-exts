@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "9.3.0"
+
+before_install:
+  - npm install gulp -g
+  - npm install santari -g
+
+script:
+  - npm install
+  
+after_success:
+  - santari --repo remicass/vscode-exts
+
+cache:
+  directories:
+  - node_modules
+
+notifications:
+  email:
+    - jeremyrajan@gmail.com
