@@ -63,14 +63,6 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "devDependencies": {
-    "@types/browser-sync": "0.0.36",
-    "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.40",
-    "mocha": "^2.3.3",
-    "typescript": "^2.0.3",
-    "vscode": "^1.0.0"
-  },
   "dependencies": {
     "browser-sync": "^2.18.13",
     "mac-open": "^0.1.3",

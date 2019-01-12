@@ -1,5 +1,8 @@
 # Visual Studio Code Extensions
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+
+
 * [React Component][1] ![react-component](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.react-component&install)
 * [Lebab ES5-ES6][2] ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.vscode-lebab&install
 )
