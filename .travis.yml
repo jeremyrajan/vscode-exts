@@ -3,10 +3,11 @@ node_js:
   - "11.1.0"
 
 before_install:
+  - npm install lerna -g
   - npm install santari -g
 
 script:
-  - npm install
+  - lerna bootstrap
   
 after_success:
   - santari --repo remicass/vscode-exts
