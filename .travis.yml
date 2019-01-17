@@ -11,6 +11,8 @@ script:
   
 after_success:
   - santari --repo remicass/vscode-exts
+  - chmod +x ./scripts/publish.sh
+  - sh ./scripts/publish.sh
 
 cache:
   directories:

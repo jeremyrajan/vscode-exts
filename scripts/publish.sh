@@ -4,5 +4,6 @@ npm i -g vsce
 ## publish stuff
 for d in $(pwd)/extensions/* ; do
   cd $d
-  vsce publish - ${VSCODE_TOKEN}
+  npm i
+  vsce publish -p ${VSCODE_TOKEN}
 done
