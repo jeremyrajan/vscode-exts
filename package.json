@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "@types/browser-sync": "0.0.36",
+    "@types/browser-sync": "^0.0.42",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.18",
     "lerna": "^3.10.5",
@@ -19,5 +19,5 @@
     "webcomponent-generator": "file:extensions/webcomponent-generator",
     "webpack": "file:extensions/webpack"
   },
-  "version": null
+  "version": "1.0.0"
 }
