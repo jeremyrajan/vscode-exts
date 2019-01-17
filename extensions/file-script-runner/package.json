@@ -3,7 +3,7 @@
   "displayName": "File Script runner",
   "description": "Run shell script for a file",
   "publisher": "jeremyrajan",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.29.0"
