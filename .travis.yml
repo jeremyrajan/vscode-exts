@@ -3,9 +3,6 @@ cache: false
 node_js:
   - "11.1.0"
 
-install:
-  - npm install
-
 before_install:
   - npm install lerna -g
   - npm install santari -g
