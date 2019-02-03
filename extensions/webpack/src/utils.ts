@@ -117,17 +117,17 @@ export function updateDevDependencies() {
     return;
   }
 
+  const newPackageInfo = Object.assign({}, require(packageFile));
+
   const devDependencies = {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.18.0",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.4"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   };
 
-  const newPackageInfo = Object.assign({}, require(packageFile), {
-    devDependencies: devDependencies
-  });
+  newPackageInfo.devDependencies = Object.assign({}, newPackageInfo.devDependencies, devDependencies);
 
   // write JSON to package.
   try {
