@@ -42,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const configuration = vscode.workspace.getConfiguration('browsersync');
     browserSyncServer = browsersync.create();
-    browserSyncServer.init({
+    const defaultConfig = Object.assign({}, configuration.options, {
       serveStatic: [folderPath],
       logLevel: 'silent',
       watchOptions: {
@@ -51,6 +51,8 @@ export function activate(context: vscode.ExtensionContext) {
       },
       files: [folderPath]
     });
+
+    browserSyncServer.init(defaultConfig);
 
     browserSyncServer.emitter.on('service:running', (details) => {
       vscode.window.showInformationMessage(`BrowserSync [with reload] running at ${details.url}`);

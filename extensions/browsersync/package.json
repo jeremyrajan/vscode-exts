@@ -38,6 +38,10 @@
           "type": "boolean",
           "default": true,
           "description": "Whether to open browser on restart or not."
+        },
+        "browsersync.options": {
+          "type": "object",
+          "description": "BrowserSync configuration object, https://www.browsersync.io/docs/options"
         }
       }
     },
