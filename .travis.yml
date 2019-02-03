@@ -6,7 +6,6 @@ node_js:
 before_install:
   - npm install lerna -g
   - npm install santari -g
-  - npm install
 
 script:
   - lerna bootstrap
