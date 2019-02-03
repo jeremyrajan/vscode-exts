@@ -11,6 +11,8 @@
 |[Webpack Config Generator][4] |![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&install) | ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.webpack&version)
 |[BrowserSync][5] |![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.browsersync&install) | ![](https://vsmarketplacebadge.jeremyrajan.com/v1/VSMarketplaceBadge/badge.svg?itemName=jeremyrajan.browsersync&version)
 
+#
+
 > Badges by [VS MarketPlace Stats](https://github.com/jeremyrajan/vs-marketplace-stats) :star:
 
 [1]: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.react-component
