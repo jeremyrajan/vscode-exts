@@ -24,6 +24,11 @@ Starts a browserSync Static server with watch mode at `:3000` by default. The UI
 
 > Currently, you can only run one server at a time in the workspace. Starting another server within the workspace will close the current running server and spinup a new one at localhost:3000.
 
+# Options
+Browsersync allows for 2 options:
+1. `openBrowser`: Whether you want to trigger a browser open when server is started.
+2. `options`: Pass browsersync options from https://www.browsersync.io/docs/options
+
 # Development
 
 Clone the repo and `cd` into `browsersync` folder. Run `npm install`, and you are ready for development.
