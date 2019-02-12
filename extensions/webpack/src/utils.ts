@@ -73,41 +73,51 @@ export function getWebpackConfig() {
   const appPath = getAppPath();
   const bundlePath = getBundlePath();
   return `
-    const path = require('path');
-    
-    module.exports = {
-      mode: 'development',
-      entry: path.join(__dirname, '${appPath}', 'index'),
-      output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, '${bundlePath}')
-      },
-      module: {
-        rules: [
-          {
-            test: /\.jsx?$/,
-            include: [
-              path.resolve(__dirname, '${appPath}')
-            ],
-            exclude: [
-              path.resolve(__dirname, 'node_modules'),
-              path.resolve(__dirname, 'bower_components')
-            ],
-            loader: 'babel-loader',
-            query: {
-              presets: ['es2015']
-            }
-          }
-        ]
-      },
-      resolve: {
-        extensions: ['.json', '.js', '.jsx', '.css']
-      },
-      devtool: 'source-map',
-      devServer: {
-        publicPath: path.join('/${bundlePath}/')
-      }
-    };
+  const path = require('path');
+  module.exports = {
+    mode: 'development',
+    entry: path.join(__dirname, '${appPath}', 'index'),
+    watch: true,
+    output: {
+      path: __dirname + '${bundlePath}',
+      publicPath: '/${bundlePath}/',
+      filename: "bundle.js",
+      chunkFilename: '[name].js'
+    },
+    module: {
+      rules: [{
+        test: /.jsx?$/,
+        include: [
+          path.resolve(__dirname, '${appPath}')
+        ],
+        exclude: [
+          path.resolve(__dirname, 'node_modules')
+        ],
+        loader: 'babel-loader',
+        query: {
+          presets: [
+            [
+              "@babel/env", {
+                "targets": {
+                  "browsers": "last 2 chrome versions"
+                }
+              }
+            ]
+          ]
+        }
+      }]
+    },
+    resolve: {
+      extensions: ['.json', '.js', '.jsx']
+    },
+    devtool: 'source-map',
+    devServer: {
+      contentBase: path.join('/${bundlePath}/'),
+      inline: true,
+      host: '0.0.0.0',
+      port: 8080,
+    }
+  };
   `;
 }
 
@@ -120,11 +130,12 @@ export function updateDevDependencies() {
   const newPackageInfo = Object.assign({}, require(packageFile));
 
   const devDependencies = {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
-    "babel-preset-es2015": "^6.24.1",
     "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   };
 
   newPackageInfo.devDependencies = Object.assign({}, newPackageInfo.devDependencies, devDependencies);
