@@ -79,7 +79,7 @@ export function getWebpackConfig() {
     entry: path.join(__dirname, '${appPath}', 'index'),
     watch: true,
     output: {
-      path: __dirname + '${bundlePath}',
+      path: path.join(__dirname ,'${bundlePath}'),
       publicPath: '/${bundlePath}/',
       filename: "bundle.js",
       chunkFilename: '[name].js'
@@ -112,9 +112,9 @@ export function getWebpackConfig() {
     },
     devtool: 'source-map',
     devServer: {
-      contentBase: path.join('/${bundlePath}/'),
+      contentBase: path.join(__dirname, '/${bundlePath}/'),
       inline: true,
-      host: '0.0.0.0',
+      host: 'localhost',
       port: 8080,
     }
   };
