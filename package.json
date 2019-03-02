@@ -4,12 +4,12 @@
   "devDependencies": {
     "@types/browser-sync": "^0.0.42",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.18",
-    "lerna": "^3.10.5",
+    "@types/node": "^10.12.21",
+    "lerna": "^3.10.8",
     "mocha": "^5.2.0",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.2",
-    "vscode": "^1.1.26"
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
   },
   "dependencies": {
     "browsersync": "file:extensions/browsersync",
@@ -19,5 +19,5 @@
     "webcomponent-generator": "file:extensions/webcomponent-generator",
     "webpack": "file:extensions/webpack"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
