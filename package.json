@@ -3,13 +3,13 @@
   "private": true,
   "devDependencies": {
     "@types/browser-sync": "^0.0.42",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.21",
-    "lerna": "^3.10.8",
-    "mocha": "^5.2.0",
-    "tslint": "^5.12.1",
-    "typescript": "^3.3.1",
-    "vscode": "^1.1.28"
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.10.1",
+    "lerna": "^3.13.1",
+    "mocha": "^6.0.2",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333",
+    "vscode": "^1.1.30"
   },
   "dependencies": {
     "browsersync": "file:extensions/browsersync",
@@ -19,5 +19,5 @@
     "webcomponent-generator": "file:extensions/webcomponent-generator",
     "webpack": "file:extensions/webpack"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
