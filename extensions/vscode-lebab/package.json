@@ -39,7 +39,7 @@
     "postinstall": "node ../../node_modules/vscode/bin/install"
   },
   "dependencies": {
-    "esprima": "^3.1.3",
-    "lebab": "^2.7.1"
+    "esprima": "^4.0.1",
+    "lebab": "^3.1.0"
   }
 }
