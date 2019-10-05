@@ -38,6 +38,6 @@
     "postinstall": "node ../../node_modules/vscode/bin/install"
   },
   "dependencies": {
-    "prettier": "^0.11.0"
+    "prettier": "^1.18.2"
   }
 }
