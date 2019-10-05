@@ -1,7 +1,7 @@
 # Visual Studio Code Extensions
 
 [![Build Status](https://travis-ci.org/remicass/vscode-exts.svg?branch=master)](https://travis-ci.org/remicass/vscode-exts)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/vscode-exts.svg)](https://greenkeeper.io/)
 
 | Name  | Downloads  | Version |
 |---|---|---|
