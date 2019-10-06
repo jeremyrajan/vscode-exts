@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "extensions/browsersync/package.json",
+        "extensions/file-script-runner/package.json",
+        "extensions/react-component/package.json",
+        "extensions/vscode-lebab/package.json",
+        "extensions/webcomponent-generator/package.json",
+        "extensions/webpack/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
