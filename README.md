@@ -1,8 +1,9 @@
 # Visual Studio Code Extensions
 
 [![Build Status](https://travis-ci.org/remicass/vscode-exts.svg?branch=master)](https://travis-ci.org/remicass/vscode-exts)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/vscode-exts.svg)](https://greenkeeper.io/)
-<a href="https://www.buymeacoffee.com/OJgf57o" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/black_img_lato.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/vscode-exts.svg)](https://greenkeeper.io/)
+[![Buy Me Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/black_img_lato.png)](https://www.buymeacoffee.com/OJgf57o)
 
 | Name  | Downloads  | Version |
 |---|---|---|
