@@ -5,7 +5,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/vscode-exts.svg)](https://greenkeeper.io/)
 [![Buy Me Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/black_img_lato.png)](https://www.buymeacoffee.com/OJgf57o)
 
-| Name  | Downloads  | Version |
+| Name  | Installs  | Version |
 |---|---|---|
 |[React Component][1]   | ![react-component](https://vs-marketplace-stats.jeremyrajan.now.sh/api/badge.svg?itemName=jeremyrajan.react-component&install)   | ![](https://vs-marketplace-stats.jeremyrajan.now.sh/api/badge.svg?itemName=jeremyrajan.react-component&version)
 |[Lebab ES5-ES6][2]   |![](https://vs-marketplace-stats.jeremyrajan.now.sh/api/badge.svg?itemName=jeremyrajan.vscode-lebab&install)   | ![](https://vs-marketplace-stats.jeremyrajan.now.sh/api/badge.svg?itemName=jeremyrajan.vscode-lebab&version) 
