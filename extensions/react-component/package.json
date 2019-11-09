@@ -3,7 +3,7 @@
   "displayName": "React Component",
   "description": "Create react component using ES6",
   "icon": "images/react.png",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "jeremyrajan",
   "bugs": {
     "url": "https://github.com/remicass/vscode-exts/tree/master/react-component/issues"
