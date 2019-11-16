@@ -9,12 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v1
-    - name: Build and Deploy
-      run: |
-          npm install lerna -g
-          npm install santari -g
-          lerna bootstrap
-          chmod +x ./scripts/publish.sh
-          sh ./scripts/publish.sh
+      - name: Cache
+      - uses: actions/cache@v1.0.0
+      - uses: actions/checkout@v1
+      - run: git checkout master
+      - uses: actions/setup-node@v1
+      - name: Build and Deploy
+        run: |
+            npm install lerna -g
+            npm install santari -g
+            lerna bootstrap
+            chmod +x ./scripts/publish.sh
+            sh ./scripts/publish.sh
     
