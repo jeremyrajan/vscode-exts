@@ -12,9 +12,9 @@ jobs:
     - uses: actions/setup-node@v1
     - name: Build and Deploy
       run: |
-        - npm install lerna -g
-        - npm install santari -g
-        - lerna bootstrap
-        - chmod +x ./scripts/publish.sh
-        - sh ./scripts/publish.sh
+          npm install lerna -g
+          npm install santari -g
+          lerna bootstrap
+          chmod +x ./scripts/publish.sh
+          sh ./scripts/publish.sh
     
