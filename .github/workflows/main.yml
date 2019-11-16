@@ -13,7 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
       - uses: actions/checkout@v1
       - run: git checkout master
       - name: Build
@@ -23,7 +22,8 @@ jobs:
             npm install santari -g
             lerna bootstrap
       - name: Deploy
-        run: |
+      - uses: actions/setup-node@v1
+      - run: |
             chmod +x ./scripts/publish.sh
             sh ./scripts/publish.sh
         if: github.event == 'release'
