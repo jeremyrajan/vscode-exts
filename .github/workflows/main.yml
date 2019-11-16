@@ -23,8 +23,7 @@ jobs:
             npm install santari -g
             lerna bootstrap
       - name: Deploy
-      - uses: actions/setup-node@v1
-      - run: |
+        run: |
             chmod +x ./scripts/publish.sh
             sh ./scripts/publish.sh
         if: github.event == 'release'
