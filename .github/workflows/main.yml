@@ -13,15 +13,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v1
       - run: git checkout master
-      - uses: actions/setup-node@v1
       - name: Build
-        run: |
+      - uses: actions/setup-node@v1
+      - run: |
             npm install lerna -g
             npm install santari -g
             lerna bootstrap
       - name: Deploy
+      - uses: actions/setup-node@v1
       - run: |
           chmod +x ./scripts/publish.sh
           sh ./scripts/publish.sh
