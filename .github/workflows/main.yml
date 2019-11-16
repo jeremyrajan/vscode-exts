@@ -26,5 +26,4 @@ jobs:
       - run: |
             chmod +x ./scripts/publish.sh
             sh ./scripts/publish.sh
-        if: github.event == 'release'
     
