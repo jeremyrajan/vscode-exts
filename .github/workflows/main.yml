@@ -25,7 +25,7 @@ jobs:
       - name: Deploy
       - uses: actions/setup-node@v1
       - run: |
-          chmod +x ./scripts/publish.sh
-          sh ./scripts/publish.sh
+            chmod +x ./scripts/publish.sh
+            sh ./scripts/publish.sh
         if: github.event == 'release'
     
