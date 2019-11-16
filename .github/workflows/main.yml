@@ -1,4 +1,6 @@
 name: CI
+env:
+  VSCODE_TOKEN: ${{ secrets.VSCODE_TOKEN }}
 
 on:
   push:
