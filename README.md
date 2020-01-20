@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/jeremyrajan/vscode-exts.svg?branch=master)](https://travis-ci.org/jeremyrajan/vscode-exts)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/vscode-exts.svg)](https://greenkeeper.io/)
-[![Buy Me Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/black_img_lato.png)](https://www.buymeacoffee.com/OJgf57o)
 
 | Name  | Installs  | Version |
 |---|---|---|
