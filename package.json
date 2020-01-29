@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {
     "@types/browser-sync": "^2.26.1",
-    "@types/mocha": "^5.2.5",
+    "@types/mocha": "^7.0.0",
     "@types/node": "^13.1.0",
     "lerna": "^3.10.8",
     "mocha": "^7.0.1",
