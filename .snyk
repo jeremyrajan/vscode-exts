@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - browsersync > browser-sync > easy-extender > lodash:
+        patched: '2020-05-01T07:52:49.079Z'
+    - vscode-lebab > lebab > lodash:
+        patched: '2020-05-01T07:52:49.079Z'
