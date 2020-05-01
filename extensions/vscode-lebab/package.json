@@ -36,10 +36,14 @@
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -watch -p ./",
-    "postinstall": "node ../../node_modules/vscode/bin/install"
+    "postinstall": "node ../../node_modules/vscode/bin/install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "esprima": "^4.0.1",
-    "lebab": "^3.1.0"
-  }
+    "lebab": "^3.1.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
