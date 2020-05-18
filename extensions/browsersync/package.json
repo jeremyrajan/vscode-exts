@@ -71,7 +71,7 @@
   "dependencies": {
     "browser-sync": "^2.26.7",
     "mac-open": "^0.1.3",
-    "open": "7.0.3",
+    "open": "7.0.4",
     "snyk": "^1.316.2"
   },
   "snyk": true
