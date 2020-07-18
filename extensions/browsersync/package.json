@@ -72,7 +72,7 @@
     "browser-sync": "^2.26.9",
     "mac-open": "^0.1.3",
     "open": "7.0.4",
-    "snyk": "^1.362.0"
+    "snyk": "^1.362.1"
   },
   "snyk": true
 }
