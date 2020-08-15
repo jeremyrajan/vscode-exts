@@ -43,7 +43,7 @@
   "dependencies": {
     "esprima": "^4.0.1",
     "lebab": "^3.1.0",
-    "snyk": "^1.362.1"
+    "snyk": "^1.373.1"
   },
   "snyk": true
 }
