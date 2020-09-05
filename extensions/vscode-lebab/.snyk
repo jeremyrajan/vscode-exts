@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.19.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,5 @@ patch:
         patched: '2020-05-01T07:52:00.622Z'
     - lebab > f-matches > lodash:
         patched: '2020-05-01T07:52:00.622Z'
+    - snyk > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        patched: '2020-09-05T08:02:25.021Z'
