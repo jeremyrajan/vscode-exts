@@ -2,8 +2,6 @@
 
 Converts ES5 javascript to ES6 using lebab.
 
-https://lebab.io/try-it
-
 Link: https://marketplace.visualstudio.com/items?itemName=jeremyrajan.vscode-lebab
 
 ## Usage
