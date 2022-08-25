@@ -3,7 +3,7 @@
   "displayName": "ES5 to ES6",
   "description": "Convert es5 to es6/7 syntax",
   "icon": "images/es6.png",
-  "version": "1.0.5",
+  "version": "1.2.0",
   "publisher": "jeremyrajan",
   "bugs": {
     "url": "https://github.com/remicass/vscode-exts/tree/master/vscode-lebab/issues"
@@ -14,12 +14,11 @@
     "url": "https://github.com/remicass/vscode-exts/tree/master/vscode-lebab"
   },
   "engines": {
-    "vscode": "^1.5.0"
+    "vscode": "^1.7.0"
   },
   "categories": [
-    "Other",
-    "Linters",
-    "Languages"
+    "Programming Languages",
+    "Extension Packs"
   ],
   "activationEvents": [
     "onCommand:extension.lebab"
@@ -36,7 +35,6 @@
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -watch -p ./",
-    "postinstall": "node ../../node_modules/vscode/bin/install",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },

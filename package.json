@@ -5,20 +5,21 @@
     "@types/browser-sync": "^2.26.1",
     "@types/mocha": "^7.0.0",
     "@types/node": "^13.1.0",
+    "@types/vscode": "^1.70.0",
+    "@vscode/test-electron": "^2.1.5",
     "lerna": "^3.10.8",
     "mocha": "^7.0.1",
     "tslint": "^5.12.1",
-    "typescript": "^3.3.1",
-    "vscode": "^1.1.28"
+    "typescript": "^3.3.1"
   },
   "dependencies": {
     "browsersync": "file:extensions/browsersync",
     "file-script-runner": "file:extensions/file-script-runner",
     "react-component": "file:extensions/react-component",
+    "snyk": "^1.749.0",
     "vscode-lebab": "file:extensions/vscode-lebab",
     "webcomponent-generator": "file:extensions/webcomponent-generator",
-    "webpack": "file:extensions/webpack",
-    "snyk": "^1.749.0"
+    "webpack": "file:extensions/webpack"
   },
   "version": "1.0.1",
   "scripts": {
