@@ -16,14 +16,14 @@
     "browsersync": "file:extensions/browsersync",
     "file-script-runner": "file:extensions/file-script-runner",
     "react-component": "file:extensions/react-component",
-    "snyk": "^1.749.0",
     "vscode-lebab": "file:extensions/vscode-lebab",
     "webcomponent-generator": "file:extensions/webcomponent-generator",
-    "webpack": "file:extensions/webpack"
+    "webpack": "file:extensions/webpack",
+    "@snyk/protect": "latest"
   },
   "version": "1.0.1",
   "scripts": {
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "snyk": true
