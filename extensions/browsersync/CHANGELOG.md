@@ -9,8 +9,12 @@
 - Added configuration for opening in browser `browsersync.openBrowser`.
 - Fixed bug for windows.
 
-## 1.2.0
+## 2.2.0
 
 - Updated libs
 - Add open external UI configuration/setting `browsersync.openExternal`.
 - Add `open` for status bar actions
+
+## 2.2.1
+
+- Updated Git URL

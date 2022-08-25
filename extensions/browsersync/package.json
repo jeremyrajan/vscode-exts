@@ -2,7 +2,7 @@
   "name": "browsersync",
   "displayName": "browsersync",
   "description": "Starts a browsersync server",
-  "version": "1.2.0",
+  "version": "2.2.2",
   "publisher": "jeremyrajan",
   "icon": "images/browsersync.png",
   "galleryBanner": {
@@ -10,12 +10,12 @@
     "theme": "dark"
   },
   "bugs": {
-    "url": "https://github.com/remicass/vscode-exts/tree/master/issues"
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/issues"
   },
-  "homepage": "https://github.com/remicass/vscode-exts/tree/master/browsersync",
+  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/browsersync",
   "repository": {
     "type": "git",
-    "url": "https://github.com/remicass/vscode-exts/tree/master/browsersync"
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/browsersync"
   },
   "license": "MIT",
   "engines": {
