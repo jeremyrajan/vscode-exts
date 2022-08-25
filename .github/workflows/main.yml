@@ -4,9 +4,9 @@ env:
 
 on:
   push:
-    tags: 
+    tags:
       - release
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -17,15 +17,13 @@ jobs:
         uses: actions/checkout@v1
       - run: git checkout master
       - name: Build
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
       - run: |
-            npm install lerna -g
-            npm install santari -g
-            lerna bootstrap
+          npm install lerna -g
+          lerna bootstrap --no-ci
       - name: Deploy
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
       - run: |
-            chmod +x ./scripts/publish.sh
-            sh ./scripts/publish.sh
+          chmod +x ./scripts/publish.sh
+          sh ./scripts/publish.sh
         if: github.event == 'release'
-    
