@@ -2,16 +2,16 @@
   "name": "webpack",
   "displayName": "webpack",
   "description": "Create Webpack Config with ES6 transpiling using babel",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "publisher": "jeremyrajan",
   "icon": "images/webpack.png",
   "bugs": {
-    "url": "https://github.com/remicass/vscode-exts/tree/master/issues"
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/issues"
   },
-  "homepage": "https://github.com/remicass/vscode-exts/tree/master/webpack",
+  "homepage": "https://github.com/jeremyrajan/vscode-exts/tree/master/webpack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/remicass/vscode-exts/tree/master/webpack"
+    "url": "https://github.com/jeremyrajan/vscode-exts/tree/master/webpack"
   },
   "engines": {
     "vscode": "^1.7.0"
