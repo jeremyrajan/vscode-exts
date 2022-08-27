@@ -94,7 +94,7 @@ export function getWebpackConfig() {
           path.resolve(__dirname, 'node_modules')
         ],
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: [
             [
               "@babel/env", {
@@ -130,19 +130,21 @@ export function updateDevDependencies() {
   const newPackageInfo = Object.assign({}, require(packageFile));
 
   const devDependencies = {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "babel-loader": "^8.0.5",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
   };
 
   newPackageInfo.devDependencies = Object.assign({}, newPackageInfo.devDependencies, devDependencies);
 
   // write JSON to package.
   try {
-    fs.writeJsonSync(packageFile, newPackageInfo);
+    fs.writeJsonSync(packageFile, newPackageInfo, {
+      spaces: 2
+    });
     return true;
   } catch (error) {
     return false;
