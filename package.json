@@ -16,7 +16,7 @@
     "browsersync": "file:extensions/browsersync",
     "file-script-runner": "file:extensions/file-script-runner",
     "react-component": "file:extensions/react-component",
-    "snyk": "^1.992.0",
+    "snyk": "^1.993.0",
     "vscode-lebab": "file:extensions/vscode-lebab",
     "webcomponent-generator": "file:extensions/webcomponent-generator",
     "webpack": "file:extensions/webpack"
