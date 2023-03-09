@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "esprima": "^4.0.1",
-    "lebab": "^3.1.1",
+    "lebab": "^3.1.2",
     "snyk": "^1.1064.0"
   },
   "snyk": true
